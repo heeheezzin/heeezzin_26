@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>absolute</title>
+	<style type="text/css">
+	    div{text-align: center; position: relative;}
+		.wrap{width:9000; margin:auto;}
+		section{ height:400px; margin-bottom: 30px; position: relative;perspective: 500px;}
+		
+		.bgimg {border: 0; padding: 0;  background-image: url('0.jpg'); min-height: 100%; background-position: center; background-size: cover; text-align: center;} 
+		.r1{position:absolute; width:1500px;height:100px;background: purple; position: relative;color: white; text-align: left; font-size: 100px; color: yellow; transform: rotate(-360deg);}
+		.r2{position:relative; width: 100px; height: 100px; background: yellow;}
+		.r2{position:relative; animation: cha1 6s infinite}
+		@keyframes cha1{
+			from {background-color: yellow;}
+				to {background-color: purple; transform: rotate(-360deg);}}
+		}
+		.r3{position: relative; z-index: 0;}
+		.r4{position: fixed;}
+
+		.r5{position:relative; width: 100px; height: 100px; background: yellow;}
+		.r5{position:relative; animation: cha1 11s infinite}
+		@keyframes cha1{
+			from {background-color: purple;}
+				to {background-color: violet; transform: rotate(360deg);}}
+		}
+		.r6{position: relative; animation: po1}		
+		@keyframes ro{
+			from{}
+			to{ transform: rotate3D(1,0.5,0.5,360deg);}
+
+		.r7 {width: 1200px; z-index: 1; top: 10000px;
+		     display: block; position: absolute; animation: ro 30s infinite linear;}
+		     @keyframes ro{
+		     	from{}
+		     	to{transform: rotate3D(1,0.5,0.5,360deg);}
+		     }
+
+		#coll {transition: all 1s}
+		#coll:hover{transform: rotateZ(-30deg);}
+
+		#coll img{position: absolute; left: 400px; transition: all 1s}
+		#coll img:hover{ transform: rotate3d(1,1,1,360deg);}
+	</style>
+</head>
+<body>
+	
+	<div class="bgimg">
+		<img src="0.jpg" style="display:block; width: 1000px; height:auto; text-align: center; ">
+	</div>
+	
+	</div>
+	<div class="r1" style="left:100px; bottom:100px;position: relative;">
+		Where is comet 67?
+	</div>
+	<div class="r2" style="display: block; margin-left: 300px; margin-top: 130px; position: absolute;">
+	</div>
+	<div class="r2" style="display: block; margin-left: 900px; margin-top: 300px; position: absolute;">
+	</div>
+	<div class="r5" style="display: block; margin-left: 1100px; margin-top: 900px; position: absolute;">
+	
+	</div>
+	
+	<div class="wrap">
+		
+	     <img src="2.jpg" style="display: block background: black; position:absolute;">
+	</div>
+	<div class="r6">
+	<section class="r3" style="display: block;">
+	<img src="2.jpg" style="position: absolute; top: 50px; right: 0px;">
+	<img src="3.jpeg" style="position: absolute; top: 300px; left: 100px;">
+    </section>
+    <section class="r4" style="display: block; position: fixed; z-index: 9999"> 
+	<img src="4.jpg" style="position: relative; top: 200px; left: 300px;">
+    </section>
+    </div>
+    <section scr="r7">
+    <div  style="top: 100px; right: 0" >
+    	<img src="9.jpg">
+    </div>
+</section>
+
+</body>
+</html>
